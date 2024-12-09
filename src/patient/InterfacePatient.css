@@ -1,0 +1,147 @@
+/* Styles généraux */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f5f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  /* Barre de menu */
+  .menu-bar {
+    background-color: #007bff;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border: none; /* Removed border */
+  }
+  
+  .menu-bar .logo img {
+    height: 40px;
+  }
+  
+  .menu-bar .logo div {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .menu-bar .menu {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu-bar .menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .menu-bar .search-bar input, 
+  .menu-bar .search-bar button {
+    padding: 5px 10px;
+    border: none; /* Removed border */
+  }
+  
+  /* Style des boutons */
+  button {
+    padding: 8px 15px;
+    border: none; /* Removed border */
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Section des posts */
+  .posts-section {
+    padding: 50px 20px;
+  }
+  
+  /* Publication */
+  .post {
+    background-color: transparent; /* Pas de fond */
+    border: none; /* Removed border */
+    box-shadow: none; /* Pas d'ombre */
+    padding: 0; /* Supprimer le padding */
+    margin: 20px 0; /* Espacement entre les posts */
+    text-align: left; /* Aligne le texte à gauche */
+  }
+  
+  .post-media {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover; /* Ajuste l'image ou la vidéo sans déformation */
+    margin-bottom: 15px;
+  }
+  
+  .post-actions {
+    margin-top: 10px;
+    display: flex; /* Utilisation de flexbox pour aligner les boutons horizontalement */
+    gap: 10px; /* Espacement entre les boutons */
+    justify-content: flex-start; /* Aligne les boutons à gauche */
+    border: none; /* Removed border */
+    padding: 10px;
+  }
+  
+  .post-actions button {
+    padding: 8px 15px;
+    border: none; /* Removed border */
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .post-actions button:hover {
+    background-color: #0056b3;
+    border: none;
+  }
+  
+  /* Bouton "Modifier" */
+  .post-actions-modifier button:hover {
+    background-color: #16ea2f; /* Vert */
+  }
+  
+  /* Bouton "Supprimer" */
+  .post-actions-supprimer button:hover {
+    background-color: #ea1616; /* Rouge */
+  }
+  
+  /* Responsive pour petits écrans */
+  @media (max-width: 768px) {
+    .menu-bar {
+      flex-wrap: wrap;
+      justify-content: center;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .menu-bar .menu {
+      margin-top: 10px;
+    }
+  
+    .menu-bar .menu li a {
+      font-size: 14px;
+    }
+  
+    .posts-section {
+      padding: 20px;
+    }
+  
+    .post {
+      margin: 10px 0;
+    }
+  
+    button {
+      font-size: 14px;
+      border: none;
+    }
+  }
+  

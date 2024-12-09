@@ -1,0 +1,46 @@
+import React, { useState } from "react";
+import './Acceuil.css';
+
+export default function Acceuil() { // Notez la majuscule ici
+  const [isAdmin] = useState(true); // Simule si l'utilisateur est un admin
+  const [status, setStatus] = useState("");
+  const [file, setFile] = useState(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (isAdmin) {
+      console.log("Publication envoyée :", { status, file });
+      alert("Publication réussie !");
+      // Réinitialiser le formulaire après l'envoi
+      setStatus("");
+      setFile(null);
+    } else {
+      alert("Seul l'administrateur peut publier !");
+    }
+  };
+
+  return (
+    <div className="admin-post-form">
+      <h2>Publier une mise à jour</h2>
+      {isAdmin ? (
+        <form onSubmit={handleSubmit}>
+          <textarea
+            placeholder="Écrivez un statut..."
+            value={status}
+            onChange={(e) => setStatus(e.target.value)}
+            required
+          />
+          <input
+            type="file"
+            accept="image/*, video/*"
+            onChange={(e) => setFile(e.target.files[0])}
+          />
+          {file && <p>Fichier sélectionné : {file.name}</p>}
+          <button type="submit">Publier</button>
+        </form>
+      ) : (
+        <p>Seul l'administrateur peut publier des mises à jour.</p>
+      )}
+    </div>
+  );
+}

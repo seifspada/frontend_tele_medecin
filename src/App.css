@@ -1,0 +1,113 @@
+/* Styles généraux */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #eaeef3; /* Fond clair et apaisant */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Titre principal */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Conteneur du formulaire */
+form {
+  background-color: #fff;
+  padding: 40px 50px; /* Plus spacieux pour les grands écrans */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Ombre plus marquée */
+  width: 50%; /* Largeur adaptée pour les écrans larges */
+  max-width: 600px;
+  margin: auto; /* Centré dans l'écran */
+  transition: transform 0.3s, box-shadow 0.3s; /* Effets animés */
+}
+
+form:hover {
+  transform: scale(1.02); /* Zoom léger au survol */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Champs de saisie */
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: #f9f9f9; /* Fond légèrement différent */
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #22ff00;
+  outline: none;
+  box-shadow: 0 0 8px #22ff00;
+}
+
+/* Bouton de soumission */
+button {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #22ff00;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+
+  transform: translateY(-2px); /* Effet de soulèvement */
+}
+
+button:active {
+  transform: translateY(1px); /* Réduction lors du clic */
+}
+
+/* Ajustement pour les écrans moyens */
+@media (max-width: 1024px) {
+  form {
+    width: 70%; /* Réduction de la largeur */
+    padding: 30px 40px;
+  }
+}
+
+/* Ajustement pour les petits écrans */
+@media (max-width: 768px) {
+  form {
+    width: 90%; /* Presque pleine largeur */
+    padding: 20px 30px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}

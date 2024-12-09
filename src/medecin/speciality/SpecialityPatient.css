@@ -1,0 +1,77 @@
+/* Styles de la barre de navigation */
+.menu-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:#15ff00; /* Couleur de fond de la barre */
+  padding: 10px 20px; /* Espacement interne */
+  color: white; /* Couleur du texte */
+}
+
+/* Styles pour le logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px; /* Hauteur de l'image du logo */
+  margin-right: 10px; /* Espacement entre l'image et le texte */
+}
+
+/* Styles pour le menu */
+.menu {
+  list-style: none; /* Supprime les puces de la liste */
+  display: flex; /* Affiche les éléments de la liste en ligne */
+  margin: 0; /* Supprime la marge par défaut */
+  padding: 0; /* Supprime le remplissage par défaut */
+}
+
+.menu li {
+  margin: 0 15px; /* Espacement entre les éléments du menu */
+}
+
+.menu a {
+  color: white; /* Couleur des liens */
+  text-decoration: none; /* Supprime le soulignement des liens */
+  transition: color 0.3s; /* Transition pour l'effet de survol */
+}
+
+.menu a:hover {
+  color: #15ff00; /* Couleur des liens au survol */
+}
+
+/* Styles pour la barre de recherche */
+.search-bar {
+  display: flex; /* Affiche les éléments de la barre de recherche en ligne */
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 5px; /* Espacement interne */
+  border: none; /* Supprime la bordure */
+  border-radius: 4px; /* Arrondit les coins */
+}
+
+.search-bar button {
+  padding: 5px 10px; /* Espacement interne */
+  margin-left: 5px; /* Espacement entre le champ de recherche et le bouton */
+  background-color: #ffcc00; /* Couleur de fond du bouton */
+  border: none; /* Supprime la bordure */
+  border-radius: 4px; /* Arrondit les coins */
+  cursor: pointer; /* Change le curseur au survol */
+  transition: background-color 0.3s; /* Transition pour l'effet de survol */
+}
+
+.search-bar button:hover {
+  background-color: #e6b800; /* Couleur de fond du bouton au survol */
+}
+
+/* Styles pour le compte */
+.compte {
+  margin-left: 20px; /* Espacement à gauche */
+}
+
+.compte img {
+  height: 30px; /* Hauteur de l'icône du compte */
+}
